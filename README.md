@@ -19,7 +19,7 @@
 - [Configuración](#️-configuración)
 - [Uso](#-uso)
 - [Endpoints Principales](#-endpoints-principales)
-- [Bases de Datos](#-bases-de-datos)
+- [Bases de Datos](#bases-de-datos)
 - [Documentación](#-documentación)
 - [Roadmap](#-roadmap)
 - [Contribuir](#-contribuir)
@@ -33,3 +33,7 @@ Esta plataforma demuestra el dominio completo de arquitectura de microservicios 
 
 ## Arquitectura del sistema
 ![System architecture](./docs/img/architecture/IAZ-MICROSERVICE.png)
+
+## Bases de datos
+### Auth Service
+![relational-model](./docs/img/database/auth-service//auth_service-database-iaz.png)
