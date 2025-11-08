@@ -9,7 +9,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
-    show-sql: true
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+      show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -30,3 +33,5 @@ eureka:
     register-with-eureka: true
   instance: 
     prefer-ip-address: true
+
+
