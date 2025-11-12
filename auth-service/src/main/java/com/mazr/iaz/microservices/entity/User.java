@@ -1,6 +1,8 @@
 package com.mazr.iaz.microservices.entity;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -12,6 +14,7 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Builder;
 import lombok.Data;
@@ -41,6 +44,7 @@ public class User {
     @Column(nullable = false)
     private String passwordHash;
 
+    @Builder.Default
     private Boolean accountLocked = false;
     
     private Integer failedLoginAttempts;
@@ -56,5 +60,9 @@ public class User {
     private LocalDateTime lastLoginAt;
 
     private LocalDateTime deletedAt;
+
+    @OneToMany(mappedBy = "user")
+    @Builder.Default
+    private Set<UserRole> userRoles = new HashSet<>();
 
 }
