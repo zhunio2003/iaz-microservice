@@ -118,7 +118,7 @@ public class Permission {
     private Boolean isActive = true;
 
     @NotNull
-        @Column(nullable = false)
+    @Column(nullable = false)
     @Builder.Default
     private Boolean isDeprecated = false;
 
@@ -145,7 +145,7 @@ public class Permission {
     private LocalDateTime deletedAt;
 
     @PrePersist
-    public void PrePersist() {
+    public void prePersist() {
         if (effectiveFrom == null) {
             effectiveFrom = LocalDateTime.now();
         }
