@@ -52,6 +52,7 @@ public class RefreshToken {
 
     @NotNull(message = "Token is required")
     @Column(nullable = false)
+    
     @CreationTimestamp
     private LocalDateTime createdAt;
     

@@ -61,4 +61,5 @@ public class EmailVerificationToken {
     @Column(nullable = false)
     private Boolean isExpired;
 
+
 }

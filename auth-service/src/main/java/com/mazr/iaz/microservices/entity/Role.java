@@ -92,4 +92,8 @@ public class Role {
     @Builder.Default
     private Set<UserRole> userRoles = new HashSet<>();
 
+    @OneToMany(mappedBy = "role")
+    @Builder.Default
+    private Set<RolePermission> rolePermissions = new HashSet<>();
+
 }
