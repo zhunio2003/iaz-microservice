@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.mazr.iaz.microservices.entity.Role;
 
 @Repository
-public interface RoleUserRepository extends JpaRepository<Role, Long>{
+public interface UserRoleRepository extends JpaRepository<Role, Long>{
     
 
 }
